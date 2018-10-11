@@ -1,0 +1,18 @@
+CMD NodeJS: 
+	cd Documents\Web2\project\mongodb\bin>
+		mongod --dbpath C:\Users\rafael\Documents\Web2\project\data
+		
+Outro CMD NodeJS: 
+	cd Documents\Web2\project
+		npm start
+		
+Link's do Aplicação
+	http://localhost:3000/
+	http://localhost:3000/login
+	http://localhost:3000/logout
+	http://localhost:3000/cadastro
+	http://localhost:3000/lista
+
+Dados de Login
+	E-mail: usuario@web2.com
+	Senha: 1234

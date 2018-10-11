@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEB 2 - Rafael & Henrique</title>
+	    <meta charset="utf-8">
+	</head>
+	<body style="background-color:#000; text-align:center;">
+		<div style="width:100%;">
+			<h2 style="color:#fff; width:100%;">Cadastro de Orientação - <a style="color:yellow;" href="/lista">Listar</a> - <a style="color:red;" href="/logout">Sair</a></h2>
+			<% if(message) { %>
+		      	<h2 style="color:red; width:100%;"><%= message %></h2>
+		    <% } %>
+		</div>
+		<form style="margin-top:50px;" action="/cadastro" method="POST">
+			<h3 style="width:100%; color:#fff;">Dados do Orientador</h3>
+			<div style="width:100%; color:#fff;">
+				<label style="width:10%; word-spacing:5px;" for="nome_orientador">Nome: </label>
+				<input style="width:90%;" id="nome_orientador" name="nome_orientador" type="text" placeholder="" required="" autofocus="" value=""/>
+			</div>
+			<div style="width:100%; color:#fff; margin-top:10px;">
+				<label style="width:10%; word-spacing:15px;" for="sala_orientador">Sala: </label>
+				<input style="width:90%;" id="sala_orientador" name="sala_orientador" type="text" placeholder="" required="" autofocus="" value=""/>
+			</div>
+			<div style="width:100%; color:#fff; margin-top:10px;">
+				<label style="width:10%;" for="email_orientador">E-mail: </label>
+				<input style="width:90%;" id="email_orientador" name="email_orientador" type="email" placeholder="" required="" autofocus="" value=""/>
+			</div>
+			
+			<h3 style="width:100%; color:#fff;">Dados do Orientado</h3>
+			<div style="width:100%; color:#fff; margin-top:10px;">
+				<label style="width:10%; word-spacing:5px;" for="nome_orientado">Nome: </label>
+				<input style="width:90%;" id="nome_orientado" name="nome_orientado" type="text" placeholder="" required="" autofocus="" value=""/>
+			</div>
+			<div style="width:100%; color:#fff; margin-top:10px;">
+				<label style="width:10%; word-spacing:20px;" for="ra_orientado">RA: </label>
+				<input style="width:90%;" id="ra_orientado" name="ra_orientado" type="text" placeholder="" required="" autofocus="" value=""/>
+			</div>
+			<div style="width:100%; color:#fff; margin-top:10px;">
+				<label style="width:10%;" for="email_orientado">E-mail: </label>
+				<input style="width:90%;" id="email_orientado" name="email_orientado" type="email" placeholder="" required="" autofocus="" value=""/>
+			</div>
+			<div style="width:100%; color:#fff; margin-top:10px;">
+				<label style="width:10%; word-spacing:5px;" for="curso_orientado">Curso: </label>
+				<input style="width:90%;" id="curso_orientado" name="curso_orientado" type="text" placeholder="" required="" autofocus="" value=""/>
+			</div>
+			
+			<h3 style="width:100%; color:#fff;">Projeto</h3>
+			<div style="width:100%; color:#fff; margin-top:10px;">
+				<label style="width:10%; word-spacing:5px;" for="tema">Tema: </label>
+				<input style="width:90%;" id="tema" name="tema" type="text" placeholder="" required="" autofocus="" value=""/>
+			</div>
+			<div style="width:100%; color:#fff; margin-top:20px; text-align:center;">
+				<textarea style="width:94%;" id="descricao" name="descricao" rows="5" placeholder="Descrição" required="" autofocus=""></textarea>
+			</div>
+			
+			<div style="margin-top:30px; margin-bottom:30px; width:100%;">
+				<button style="overflow:hidden; width:20%;" type="submit">Cadastrar</button>				
+			</div> 			
+		</form>	
+	</body>
+</html>

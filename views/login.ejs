@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEB 2 - Rafael & Henrique</title>
+	    <meta charset="utf-8">
+	</head>
+	<body style="background-color:#000; text-align:center;">
+		<div>
+			<h2 style="color:#fff;">Rafael & Henrique</h2>
+		</div>
+		<form style="margin-top:50px;" action="/login" method="POST">
+			<h3 style="width:100%; color:#fff;">Faça login para entrar no sistema</h3>
+			<div style="width:100%; color:#fff;">
+				<label style="width:10%; word-spacing:3px;" for="email">E-mail: </label>
+				<input style="width:90%;" id="email" name="email" type="Email" placeholder="" required="" autofocus=""/>
+			</div>
+			<div style="width:100%; color:#fff; margin-top:10px;">
+				<label style="width:10%; word-spacing:5px;" for="password">Senha: </label>
+				<input style="width:90%;" id="password" name="password" type="password" placeholder="" required="" autofocus=""/>
+			</div>
+
+			<div style="margin-top:30px; margin-bottom:30px; width:100%;">
+				<button style="overflow:hidden; width:20%;" type="submit">Entrar</button>	
+			</div> 			
+		</form>	
+		<div style="width:100%;">
+			<% if(message) { %>
+		      	<h2 style="color:red; width:100%;"><%= message %></h2>
+		    <% } %>
+		</div>
+	</body>
+</html>

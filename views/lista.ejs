@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEB 2 - Rafael & Henrique</title>
+	    <meta charset="utf-8">
+	</head>
+	<body style="background-color:#000; text-align:center;">
+		<div style="width:100%;">
+			<h2 style="color:#fff; width:100%;">Lista de Orientações - <a style="color:yellow;" href="/cadastro">Cadastrar</a> - <a style="color:red;" href="/logout">Sair</a></h2>
+		</div>
+		<table style="width:100%; margin-top:50px;">
+			<thead style="width:100%;  background-color:#ececec;">
+				<tr style="width:100%;">
+					<th style="width:4%;  text-align:center; line-height: 28px;">#</th>
+					<th style="width:10%;  text-align:center; line-height: 28px;">Nome Orientador</th>
+					<th style="width:10%; text-align:center; line-height: 28px;">Sala Orientador</th>
+					<th style="width:13%; text-align:center; line-height: 28px;">E-mail Orientador</th>
+					<th style="width:10%;  text-align:center; line-height: 28px;">Nome Orientado</th>
+					<th style="width:9%; text-align:center; line-height: 28px;">RA Orientado</th>
+					<th style="width:13%; text-align:center; line-height: 28px;">E-mail Orientado</th>
+					<th style="width:10%; text-align:center; line-height: 28px;">Curso</th>
+					<th style="width:8%;  text-align:center; line-height: 28px;">Tema</th>
+					<th style="width:13%; text-align:center; line-height: 28px;">Descrição</th>
+				</tr>         
+			</thead>
+			<tbody>
+				<% var i=1; 
+				lista.forEach(function(orientacao){ %>
+					<tr style="width:100%;">
+						<td style="width:4%;  text-align:center; background-color:#fff;"><%= i %></td>
+						<td style="width:10%;  text-align:center; background-color:#fff;"><%= orientacao.nome_orientador %></td>
+						<td style="width:10%; text-align:center; background-color:#fff;"><%= orientacao.sala_orientador %></td>
+						<td style="width:13%; text-align:center; background-color:#fff;"><%= orientacao.email_orientador %></td>
+						<td style="width:10%;  text-align:center; background-color:#fff;"><%= orientacao.nome_orientado %></td>
+						<td style="width:9%; text-align:center; background-color:#fff;"><%= orientacao.ra_orientado %></td>
+						<td style="width:13%; text-align:center; background-color:#fff;"><%= orientacao.email_orientado %></td>
+						<td style="width:10%; text-align:center; background-color:#fff;"><%= orientacao.curso_orientado %></td>
+						<td style="width:8%;  text-align:center; background-color:#fff;"><%= orientacao.tema %></td>
+						<td style="width:13%; text-align:center; background-color:#fff;"><%= orientacao.descricao %></td>
+					</tr>
+					<% i++; 
+				}) %>
+			</tbody>
+		</table>
+  	</body>
+</html>
