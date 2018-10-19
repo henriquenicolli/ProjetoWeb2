@@ -1,18 +1,28 @@
 CMD NodeJS: 
-	cd Documents\Web2\project\mongodb\bin>
+	cd Documents\Web2\project\mongodb\bin
 		mongod --dbpath C:\Users\rafael\Documents\Web2\project\data
 		
 Outro CMD NodeJS: 
 	cd Documents\Web2\project
 		npm start
 		
-Link's do Aplicação
+LURL da Aplicação
 	http://localhost:3000/
 	http://localhost:3000/login
 	http://localhost:3000/logout
 	http://localhost:3000/cadastro
 	http://localhost:3000/lista
 
+URL Heroku
+	https://rafaelhenrique.herokuapp.com/
+	https://rafaelhenrique.herokuapp.com/login
+	https://rafaelhenrique.herokuapp.com/logout
+	https://rafaelhenrique.herokuapp.com/cadastro
+	https://rafaelhenrique.herokuapp.com/lista
+
 Dados de Login
 	E-mail: usuario@web2.com
 	Senha: 1234
+
+Git
+	https://github.com/rafaelsampy/Projeto1Web2.git

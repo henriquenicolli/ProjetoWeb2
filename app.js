@@ -1,10 +1,15 @@
-r createError = require('http-errors');
+var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
-var indexRouter = require('./routes/index');
+
+var cadastroRouter = require('./controller/cadastro');
+var listaRouter = require('./controller/lista');
+var loginRouter = require('./controller/login');
+var logoutRouter = require('./controller/logout');
+var indexRouter = require('./controller/index');
 
 var app = express();
 
@@ -18,7 +23,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({secret: "9135d8523ad3da99d8a4eb83afac13d1", resave: false, saveUninitialized: true}));
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/', indexRouter);
+app.use('/cadastro', cadastroRouter);
+app.use('/lista', listaRouter);
+app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -33,7 +43,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('./views/error');
 });
 
 module.exports = app;
